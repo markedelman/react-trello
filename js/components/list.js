@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import Card from './card';
-
-export default function Cardlist(props){
+export default function List (props) {
+    var cards = props.cards.map(function(text, index) { 
+    return <Card key={index} text={text} /> 
+});
     return (
-         <div className="list">
-        <div className="listTitle">
-        {props.title}
+        <div className="list">
+            <div className="list-title">
+                {props.listTitle}
+            </div>
+            <div className="list-items">
+                {cards}       
+            </div>
         </div>
-<div className="card-list">
-    <Card text="abc-listjs"/>
-    <Card text="def-listjs"/>
-    <Card text="ghi-listjs"/>
-</div>
-</div>
-    );
+    )
 }
