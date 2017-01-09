@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default function Card(){
+export default function Card(props){
     return (
-<div className="cardApp">This is a card</div>
+<div className="card">{props.text}</div>
 
     )
 }

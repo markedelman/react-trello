@@ -6,6 +6,7 @@ import Cardlist from './list';
 export default function Board(){
     return (
 <div className="board">
+    
     <Cardlist  />
     <Cardlist  />
     <Cardlist  />
